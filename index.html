@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Movie Information</title>
+</head>
+<body>
+
+<!-- header section start -->
+
+<header class="header">
+  <a href="#" class="logo navlink"><i class="fas fa-splotch"></i> movie</a>
+
+  <nav class="navbar">
+    <a href="#home" class="navlink">home</a>
+    <a href="#services" class="navlink">services</a>
+    <a href="#about" class="navlink">about</a>
+    <a href="#movie-search" class="navlink">movie search</a>
+    <a href="#reviews" class="navlink">reviews</a>
+    <a href="#faq" class="navlink">faq</a>
+  </nav>
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+  <a href="#contact" class="btn" onclick="scrollToBottom()">contact</a>
+</header>
+
+<!-- header section end -->
+
+<!-- home section start -->
+
+<section class="home" id="home">
+  <div class="blue-shape">
+    <img src="./images/home-shape-blue.svg" alt="">
+  </div>
+  <div class="white-shape">
+    <img src="./images/home-shape.png" alt="">
+  </div>
+  <div class="image">
+    <img src="images/home-image.svg" alt="">
+  </div>
+
+  <div class="content">
+    <h3><span class="line-down">search</span> information about your favorite movie</h3>
+    <p>
+      find information like actors, what the film is about,
+      the writer and the release date on this website.
+    </p>
+    <a href="#movie-search" class="btn">get started</a>
+  </div>
+</section>
+
+<!-- home section end -->
+
+<!-- services section start -->
+
+<section class="services" id="services">
+  <div class="heading">
+    <span>our services</span>
+    <h1>what we provide?</h1>
+  </div>
+  <div class="box-container">
+    <div class="box">
+      <img src="images/icon-1.svg" alt="">
+      <h3>fast</h3>
+      <p>quickly find information about your favorite movie</p>
+    </div>
+    <div class="box">
+      <img src="images/icon-2.svg" alt="">
+      <h3>many movies</h3>
+      <p>You can find information about many movies with us</p>
+    </div>
+    <div class="box">
+      <img src="images/icon-4.svg" alt="">
+      <h3>contact</h3>
+      <p>for more information about a movie you can also contact us.</p>
+    </div>
+    <div class="box">
+      <img src="images/icon-6.svg" alt="">
+      <h3>all devices</h3>
+      <p>easily find your favorite movie on pc, tablet or mobile for more information.</p>
+    </div>
+  </div>
+</section>
+
+<!-- services section end -->
+
+<!-- about section start -->
+
+<section class="about" id="about">
+  <div class="image">
+    <img src="images/about-image.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>why you should <span class="line-down">choose us?</span></h3>
+    <p>
+      movie-information is the platform for movie lovers. 
+      With hundreds of titles, which are updated daily, you will always find the movie you are looking for with us. 
+    </p>
+    <p>
+      Whether you like to watch your movie on television, in the cinema or via a streaming service,
+      with movie-information you can navigate to your favorite movie in a few clicks to find out all the details.
+    </p>
+    <a href="#movie-search" class="btn">start searching</a>
+  </div>
+</section>
+
+<!-- about section end -->
+
+<!-- movie search section start -->
+
+<section class="movie-search" id="movie-search">
+  <div class="heading heading--white">
+    <span>movie search</span>
+    <h1>find your favorite movie</h1>
+  </div>
+  <div class="search-container">
+    <div class="search-element">
+      <input type="text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+      <div class="search-list" id="search-list">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="result-container">
+      <div class="result-grid" id="result-grid">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- movie search section end-->
+
+<!-- reviews section start -->
+
+<section class="reviews" id="reviews">
+  <div class="heading heading--white">
+    <span>client's reviews</span>
+    <h1>what say about us?</h1>
+  </div>
+  <div class="slide-container">
+    <div class="slide active">
+      <img src="images/pic-1.png" alt="">
+      <p>
+        My experience with movie-information has been positively fantastic! 
+        The powerful API coupled with its excellent availability and uptime is simply a great combo. 
+        I can't imagine ever using anything else!
+      </p>
+      <h3>john Hawkins</h3>
+    </div>
+    <div class="slide">
+      <img src="images/pic-2.png" alt="">
+      <p>
+        I like that I can find information about my favorite movies on this website.
+      </p>
+      <h3>Angela hill</h3>
+    </div>
+    <div class="slide">
+      <img src="images/pic-3.png" alt="">
+      <p>
+        I like to be able to find film information on one website. 
+        I no longer have to search all over the internet to find information about movies.
+      </p>
+      <h3>Peter van den berg</h3>
+      <span>designer</span>
+    </div>
+    <div class="slide">
+      <img src="images/pic-4.png" alt="">
+      <p>
+        finally a clear and user-friendly website to find information about movies.
+      </p>
+      <h3>sarah wilson</h3>
+      <span>designer</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="fas fa-long-arrow-alt-left" onclick="next()"></div>
+    <div class="fas fa-long-arrow-alt-right" onclick="prev()"></div>
+  </div>
+</section>
+
+<!-- reviews section end -->
+
+<!-- faq section start -->
+
+<section class="faq" id="faq">
+  <div class="heading heading--white">
+    <span>FAQ</span>
+    <h1>questions & answers</h1>
+  </div>
+  <div class="accordion-container">
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>What is this site all about?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        movie-information is a comprehensive and in-depth resource for finding out more about the movies.
+      </p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>Does it cost to use the site?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        No, it is free to use our website.
+      </p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>will the information be updated?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        yes the information is always updated and the new movies are also in the search list.
+      </p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>Where does your data come from?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        The data comes from an external API.
+      </p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>How many movies do you have details about?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        We have information about hundreds of movies.
+      </p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-heading">
+        <h3>how to contact support team?</h3>
+        <i class="fas fa-angle-down"></i>
+      </div>
+      <p class="accordion-content">
+        You can simply fill in the contact form. Our support team will try to answer as soon as possible.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- faq section end -->
+
+
+<!-- footer section start -->
+<section class="contact" id="contact">
+  <div class="white-shape-small">
+    <img src="./images/home-shape-small.png" alt="">
+  </div>
+  <div class="white-shape">
+    <img src="./images/home-shape.png" alt="">
+  </div>
+  <div class="contact-container">
+    <div class="heading heading--white">
+      <span>questions / messages</span>
+      <h1>Let's Talk</h1>
+    </div>
+    <form action="https://formspree.io/f/mdobnqzg" method="post">
+      <input type="text" name="Name" placeholder="Name" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <input type="text" name="Subject" placeholder="Subject" required>
+      <textarea name="Message" placeholder="Message" rquired></textarea>
+      <input type="submit" value="Submit" class="contact-btn">
+    </form>
+    <div class="copyright">
+      <p class="text-center">Copyright &copy; Movie-Information
+        <script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+        </script>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- footer section end -->
+  
+  <script src="./js/script.js"></script>
+  <script src="./js/api.js"></script>
+</body>
+</html>
