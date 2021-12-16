@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="form.css">
   <title>Movie Information</title>
 </head>
 <body>
@@ -270,13 +271,27 @@
       <span>questions / messages</span>
       <h1>Let's Talk</h1>
     </div>
-    <form action="https://formspree.io/f/mdobnqzg" method="post">
-      <input type="text" name="Name" placeholder="Name" required>
-      <input type="email" name="Email" placeholder="Email" required>
-      <input type="text" name="Subject" placeholder="Subject" required>
-      <textarea name="Message" placeholder="Message" rquired></textarea>
-      <input type="submit" value="Submit" class="contact-btn">
+
+    <form id="form" action="/">
+      <div class="input-control">
+        <input id="username" name="username" type="text" placeholder="Name">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <input type="text" name="subject" id="subject" placeholder="Subject">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <textarea name="Message" id="message" placeholder="Message"></textarea>
+        <div class="error"></div>
+      </div>
+      <button type="submit" class="contact-btn" onclick="sendMail()">send message</button>
     </form>
+
     <div class="copyright">
       <p class="text-center">Copyright &copy; Movie-Information
         <script>
@@ -291,5 +306,14 @@
   
   <script src="./js/script.js"></script>
   <script src="./js/api.js"></script>
+  <script src="./js/form.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+    emailjs.init("user_gXeV0nUT7NGxVTLulkZvI");
+    })();
+  </script>
+
 </body>
 </html>

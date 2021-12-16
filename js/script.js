@@ -19,12 +19,17 @@ const scrollToBottom = () => {
   scrollingElement.scrollTop = scrollingElement.scrollHeight;
 }
 
+const buttonPrimary = {
+  backgroundColor: '#171717',
+  opacity: '0.9',
+};
+
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	if (scroll_position > 250) {
-		header.style.backgroundColor = '#fff';
+    Object.assign(header.style, buttonPrimary)
     navLinks.forEach((link) => {
-      link.style.color = '#000'
+      link.style.color = '#964ac9'
     })
 	} else {
 		header.style.backgroundColor = 'transparent';
@@ -58,4 +63,4 @@ faqAccordion.forEach(accordion => {
   accordion.onclick = () => {
     accordion.classList.toggle('active')
   }
-})
+});
