@@ -8,6 +8,8 @@ form.addEventListener('submit', e => {
   e.preventDefault();
 
   validateInputs();
+
+  sendMail();
 });
 
 const setError = (element, message) => {
