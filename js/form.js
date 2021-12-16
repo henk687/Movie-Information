@@ -81,4 +81,6 @@ function sendMail(params) {
   .then(function(res){
       console.log("succes", res.status);
   })
+
+  document.querySelector(".thank-you").classList.remove("hidden");
 };

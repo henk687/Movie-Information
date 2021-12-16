@@ -782,6 +782,17 @@ section {
       }
     }
   }
+
+  .hidden {
+    display: none;
+  }
+
+  .thank-you {
+    padding: 40px;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+  }
 }
 
 // media queries
