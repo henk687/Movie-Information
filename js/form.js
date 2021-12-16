@@ -82,5 +82,5 @@ function sendMail(params) {
       console.log("succes", res.status);
   })
 
-  document.querySelector(".thank-you").classList.remove("hidden");
+  document.getElementById("submit-button").innerHTML = "Thank you";
 };
