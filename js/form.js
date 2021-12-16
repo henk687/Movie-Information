@@ -71,9 +71,9 @@ const validateInputs = () => {
 
 function sendMail(params) {
   var tempParams = {
-      name:document.getElementById("name").value,
+      username:document.getElementById("username").value,
       email:document.getElementById("email").value,
-      phone:document.getElementById("subject").value,
+      subject:document.getElementById("subject").value,
       message:document.getElementById("message").value
   };
 
