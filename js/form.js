@@ -1,77 +1,73 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
+const nameInput = document.getElementById('username');
+const emailInput = document.getElementById('email');
+const subjectInput = document.getElementById('subject');
+const messageInput = document.getElementById('message');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+const inputs = [nameInput, emailInput, subjectInput, messageInput]
 
-  validateInputs();
+let isFormValid = false;
+let isValidationOn = false;
 
-  sendMail();
-});
-
-const setError = (element, message) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector('.error');
-
-  errorDisplay.innerText = message;
-  inputControl.classList.add('error');
-  inputControl.classList.remove('success')
-}
-
-const setSuccess = element => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector('.error');
-
-  errorDisplay.innerText = '';
-  inputControl.classList.add('success');
-  inputControl.classList.remove('error');
+const isValidEmail = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 };
 
-const isValidEmail = email => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
+const resetElm = (elm) => {
+    elm.classList.remove("invalid");
+    elm.nextElementSibling.classList.add("hidden");
+};
 
+const invalidateElm = (elm) => {
+    elm.classList.add("invalid")
+    elm.nextElementSibling.classList.remove("hidden");
+};
 
 const validateInputs = () => {
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const subjectValue = subject.value.trim();
-  const messageValue = message.value.trim();
+    if (!isValidationOn) return;
 
-  if(usernameValue === '') {
-    setError(username, 'Name is required');
-  } else {
-    setSuccess(username)
+    isFormValid = true;
+    inputs.forEach(resetElm);
+
+    if (!nameInput.value) {
+        isFormValid = false;
+        invalidateElm(nameInput);
+    }
+
+    if (!isValidEmail(emailInput.value)) {
+        isFormValid = false;
+        invalidateElm(emailInput);
+    }
+
+    if (!subjectInput.value) {
+        isFormValid = false;
+        invalidateElm(subjectInput);
+    }
+
+    if (!messageInput.value) {
+        isFormValid = false;
+        invalidateElm(messageInput);
+    }
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  isValidationOn = true;
+  validateInputs();
+  if (isFormValid) {
+      sendMail();
+      document.querySelector(".contact-btn").innerHTML = "Thank you";
   }
+});
 
-  if(emailValue === '') {
-    setError(email, 'Email is required');
-  } else if (!isValidEmail(emailValue)) {
-    setError(email, 'Provide a valid email address')
-  } else {
-    setSuccess(email)
-  }
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+      validateInputs();
+  });
+});
 
-  if(subjectValue === '') {
-    setError(subject, 'Subject is required');
-  } else {
-    setSuccess(subject)
-  }
-
-  if(messageValue === '') {
-    setError(message, 'Message is required');
-  } else {
-    setSuccess(message)
-  }
-}
-
-// Send Mail 
-
-function sendMail(params) {
+const sendMail = () => {
   var tempParams = {
       username:document.getElementById("username").value,
       email:document.getElementById("email").value,
@@ -83,6 +79,4 @@ function sendMail(params) {
   .then(function(res){
       console.log("succes", res.status);
   })
-
-  document.getElementById("submit-button").innerHTML = "Thank you";
 };

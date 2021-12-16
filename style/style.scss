@@ -736,6 +736,10 @@ section {
           color: $black;
         }
 
+        .invalid {
+          border: 1px solid #f00;
+        }
+
         @include placeholder-color($white);
       }
 
@@ -748,15 +752,28 @@ section {
         outline: 0;
       }
 
-      &.success input,
-      &.success textarea {
-        border-color: #09c372;
+      input.invalid,
+      textarea.invalid {
+        border: 1px solid #f00;
       }
 
-      &.error input,
-      &.error textarea {
-        border-color: #ff3860;
+      .error-hint {
+        color: #f00;
       }
+
+      .hidden {
+        display: none;
+      }
+
+      // &.success input,
+      // &.success textarea {
+      //   border-color: #09c372;
+      // }
+
+      // &.error input,
+      // &.error textarea {
+      //   border-color: #ff3860;
+      // }
 
       .error {
         color: #ff3860;
@@ -782,13 +799,6 @@ section {
       }
     }
   }
-}
-
-.thank-you {
-  padding: 40px;
-  font-size: 52px;
-  text-align: center;
-  color: #fff;
 }
 
 // media queries

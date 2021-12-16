@@ -272,27 +272,28 @@
       <h1>Let's Talk</h1>
     </div>
 
-    <form id="form" action="/">
+    <form id="form" action="">
       <div class="input-control">
         <input id="username" name="username" type="text" placeholder="Name">
-        <div class="error"></div>
+        <div class="error-hint hidden">Telefoonnummer is ongeldig</div>
       </div>
       <div class="input-control">
         <input type="email" name="email" id="email" placeholder="Email">
-        <div class="error"></div>
+        <div class="error-hint hidden">Telefoonnummer is ongeldig</div>
       </div>
       <div class="input-control">
         <input type="text" name="subject" id="subject" placeholder="Subject">
-        <div class="error"></div>
+        <div class="error-hint hidden">Telefoonnummer is ongeldig</div>
       </div>
       <div class="input-control">
         <textarea name="Message" id="message" placeholder="Message"></textarea>
-        <div class="error"></div>
+        <div class="error-hint hidden">Telefoonnummer is ongeldig</div>
       </div>
       <!-- <div class="thank-you hidden">
         Bedankt voor je bericht
       </div> -->
-      <button type="submit" class="contact-btn" id="submit-button" onclick="sendMail()">send message</button>
+      <!-- <button type="submit" class="contact-btn" id="submit-button" onclick="sendMail()">send message</button> -->
+      <button class="contact-btn">Verzenden</button> 
     </form>
 
     

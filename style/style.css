@@ -829,6 +829,11 @@ section {
   color: #000;
 }
 
+.contact form .input-control input .invalid,
+.contact form .input-control textarea .invalid {
+  border: 1px solid #f00;
+}
+
 .contact form .input-control input::-webkit-input-placeholder,
 .contact form .input-control textarea::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -862,14 +867,17 @@ section {
   outline: 0;
 }
 
-.contact form .input-control.success input,
-.contact form .input-control.success textarea {
-  border-color: #09c372;
+.contact form .input-control input.invalid,
+.contact form .input-control textarea.invalid {
+  border: 1px solid #f00;
 }
 
-.contact form .input-control.error input,
-.contact form .input-control.error textarea {
-  border-color: #ff3860;
+.contact form .input-control .error-hint {
+  color: #f00;
+}
+
+.contact form .input-control .hidden {
+  display: none;
 }
 
 .contact form .input-control .error {
