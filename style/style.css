@@ -249,13 +249,13 @@ section {
 
 .header .logo {
   font-size: 2.5rem;
-  color: #000;
+  color: #fff;
 }
 
 .header .navbar a {
   margin: 0 1rem;
   font-size: 2rem;
-  color: #000;
+  color: #fff;
 }
 
 .header .navbar a:hover {
