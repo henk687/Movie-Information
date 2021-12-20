@@ -930,6 +930,10 @@ section {
             transform: rotate(180deg);
     -webkit-transition: 0.2s linear;
     transition: 0.2s linear;
+    color: #fff;
+  }
+  .fa-bars {
+    color: white;
   }
   .header .btn {
     display: none;
@@ -955,6 +959,12 @@ section {
     display: block;
     margin: 0;
     padding: 1.5rem 2rem;
+  }
+  .home .content {
+    margin-top: -250px;
+  }
+  .white-shape-small {
+    display: none;
   }
 }
 

@@ -828,7 +828,12 @@ section {
     &.fa-times {
       transform: rotate(180deg);
       transition: 0.2s linear;
+      color: $white;
     }
+  }
+
+  .fa-bars {
+    color: white;
   }
 
   .header {
@@ -857,6 +862,16 @@ section {
         padding: 1.5rem 2rem;
       }
     }
+  }
+
+  .home {
+    .content {
+      margin-top: -250px;
+    }
+  }
+
+  .white-shape-small {
+    display: none;
   }
 }
 
