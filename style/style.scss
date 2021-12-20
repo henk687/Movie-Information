@@ -234,7 +234,7 @@ section {
 }
 
 .home {
-  min-height: 110vh;
+  min-height: 115vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -871,6 +871,10 @@ section {
   }
 
   .white-shape-small {
+    display: none;
+  }
+
+  .blue-shape {
     display: none;
   }
 }
