@@ -762,7 +762,26 @@ section {
 }
 
 .contact {
-  background: radial-gradient(at 50% 30%, #322d38 10%, black);
+  width: 100vw;
+  overflow: hidden;
+  min-height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -1;
 }
 
 .contact .contact-container {
