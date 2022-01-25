@@ -760,16 +760,6 @@ section {
           animation: fadeUp 0.2s linear backwards;
 }
 
-.contact {
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
-  background: url(../images/footerbg.jpg) no-repeat;
-  background-size: cover;
-}
-
 .contact::before {
   content: "";
   position: absolute;
@@ -920,16 +910,6 @@ section {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
-  }
-  body {
-    margin: 0;
-    margin-bottom: 0vh;
-    background-color: #fff;
-  }
-  .contact {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
   }
 }
 

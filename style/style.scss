@@ -677,13 +677,13 @@ section {
 }
 
 .contact {
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
-  background: url(../images/footerbg.jpg) no-repeat;
-  background-size: cover;
+  // width: 100%;
+  // min-height: 100vh;
+  // position: fixed;
+  // bottom: 0;
+  // z-index: -1;
+  // background: url(../images/footerbg.jpg) no-repeat;
+  // background-size: cover;
 
   &::before {
     content: "";
@@ -810,16 +810,6 @@ section {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
-  }
-  body {
-    margin: 0;
-    margin-bottom: 0vh;
-    background-color: $white;
-  }
-  .contact {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
   }
 }
 
