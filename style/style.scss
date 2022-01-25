@@ -681,9 +681,9 @@ section {
   width: 100vw;
   overflow: hidden;
   // min-height: 100vh;
-  // position: fixed;
-  // bottom: 0;
-  // z-index: -1;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
 
   &::before {
     content: "";

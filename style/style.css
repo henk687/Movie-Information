@@ -764,6 +764,9 @@ section {
 .contact {
   width: 100vw;
   overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
 }
 
 .contact::before {
