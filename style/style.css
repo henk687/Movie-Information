@@ -770,19 +770,6 @@ section {
   z-index: -1;
 }
 
-.contact::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: -1;
-}
-
 .contact .contact-container {
   max-width: 70rem;
   margin: 12rem auto 0;
