@@ -855,6 +855,15 @@ section {
         padding: 1.5rem 2rem;
       }
     }
+
+    .contact {
+      width: 100%;
+      min-height: 100vh;
+      position: static;
+      bottom: 0;
+      z-index: 1;
+      background: url(../images/footerbg.jpg) no-repeat;
+      background-size: cover;
   }
 
   .home {
