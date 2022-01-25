@@ -840,12 +840,12 @@ section {
       right: 0;
       border-top: $border;
       background: $dark;
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: 0.2s linear;
 
       &.active {
         display: block;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }
 
       a {
