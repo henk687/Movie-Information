@@ -38,6 +38,7 @@ body {
 
 section {
   padding: 5rem 9%;
+  overflow-x: hidden;
 }
 
 .heading, .movie-search .heading--white, .reviews .heading--white, .faq .heading--white, .contact .heading--white {
@@ -228,6 +229,9 @@ section {
 
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
