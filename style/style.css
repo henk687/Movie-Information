@@ -766,9 +766,6 @@ section {
   position: fixed;
   bottom: 0;
   z-index: -1;
-  background: url(../images/footerbg.jpg) no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
 }
 
 .contact::before {
@@ -962,15 +959,6 @@ section {
     display: block;
     margin: 0;
     padding: 1.5rem 2rem;
-  }
-  .header .contact {
-    width: 100%;
-    min-height: 100vh;
-    position: static !important;
-    bottom: 0;
-    z-index: 1;
-    background: url(../images/footerbg.jpg) no-repeat;
-    background-size: cover;
   }
   .home .content {
     margin-top: -250px;
