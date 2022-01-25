@@ -785,7 +785,7 @@ section {
 
 .contact .contact-container {
   max-width: 70rem;
-  margin: 0 auto;
+  margin: 12rem auto 0;
 }
 
 .contact .contact-container .copyright {
