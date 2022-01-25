@@ -760,6 +760,16 @@ section {
           animation: fadeUp 0.2s linear backwards;
 }
 
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  background: url(../images/footerbg.jpg) no-repeat;
+  background-size: cover;
+}
+
 .contact::before {
   content: "";
   position: absolute;
