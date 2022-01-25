@@ -678,10 +678,10 @@ section {
 }
 
 .contact {
-  width: 100vw;
-  overflow: hidden;
-  min-height: 100vh;
-  position: sticky;
+  // width: 100vw;
+  // overflow: hidden;
+  // min-height: 100vh;
+  position: fixed;
   bottom: 0;
   z-index: -1;
 
