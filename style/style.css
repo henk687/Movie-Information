@@ -762,12 +762,7 @@ section {
 }
 
 .contact {
-  width: 100vw;
-  overflow: hidden;
-  min-height: 100vh;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
+  background: radial-gradient(at 50% 30%, #322d38 10%, black);
 }
 
 .contact .contact-container {
