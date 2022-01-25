@@ -921,6 +921,16 @@ section {
   html {
     font-size: 55%;
   }
+  body {
+    margin: 0;
+    margin-bottom: 0vh;
+    background-color: #fff;
+  }
+  .contact {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
 }
 
 @media (max-width: 768px) {
