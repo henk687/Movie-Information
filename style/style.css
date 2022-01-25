@@ -335,6 +335,7 @@ section {
 
 .home .content h3 {
   font-size: 6rem;
+  color: #fff;
 }
 
 .home .content p {
@@ -342,6 +343,7 @@ section {
   padding: 1rem 0;
   line-height: 2;
   color: #fff;
+  opacity: 0.8;
 }
 
 .services {
