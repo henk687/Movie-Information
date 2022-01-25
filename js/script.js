@@ -19,23 +19,32 @@ const scrollToBottom = () => {
   scrollingElement.scrollTop = scrollingElement.scrollHeight;
 }
 
-const buttonPrimary = {
-  backgroundColor: '#171717',
-  opacity: '0.9',
-};
+// const buttonPrimary = {
+//   backgroundColor: '#171717',
+//   opacity: '0.9',
+// };
+
+// document.addEventListener('scroll', () => {
+// 	var scroll_position = window.scrollY;
+// 	if (scroll_position > 250) {
+//     Object.assign(header.style, buttonPrimary)
+//     navLinks.forEach((link) => {
+//       link.style.color = '#964ac9'
+//     })
+// 	} else {
+// 		header.style.backgroundColor = 'transparent';
+//     navLinks.forEach((link) => {
+//       link.style.color = '#fff'
+//     })
+// 	}
+// });
 
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	if (scroll_position > 250) {
-    Object.assign(header.style, buttonPrimary)
-    navLinks.forEach((link) => {
-      link.style.color = '#964ac9'
-    })
+    header.style.backgroundColor = '#000';
 	} else {
 		header.style.backgroundColor = 'transparent';
-    navLinks.forEach((link) => {
-      link.style.color = '#fff'
-    })
 	}
 });
 
