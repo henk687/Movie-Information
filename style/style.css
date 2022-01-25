@@ -965,7 +965,7 @@ section {
   .header .contact {
     width: 100%;
     min-height: 100vh;
-    position: static;
+    position: static !important;
     bottom: 0;
     z-index: 1;
     background: url(../images/footerbg.jpg) no-repeat;
