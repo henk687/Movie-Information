@@ -39,7 +39,6 @@ document.addEventListener('scroll', () => {
 	}
 });
 
-
 // reviews
 let slides = document.querySelectorAll('.reviews .slide-container .slide');
 let index = 0;
@@ -55,6 +54,7 @@ const prev = () => {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add('active');
 }
+
 
 //faq
 let faqAccordion = document.querySelectorAll('.faq .accordion-container .accordion')
