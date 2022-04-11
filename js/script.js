@@ -9,35 +9,10 @@ menu.onclick = () => {
   navbar.classList.toggle('active');
 }
 
-// window.onscroll = () => {
-//   menu.classList.remove('fa-times');
-//   navbar.classList.remove('active');
-// }
-
 scrollingElement = (document.scrollingElement || document.body)
 const scrollToBottom = () => {
   scrollingElement.scrollTop = scrollingElement.scrollHeight;
 }
-
-// const buttonPrimary = {
-//   backgroundColor: '#171717',
-//   opacity: '0.9',
-// };
-
-// document.addEventListener('scroll', () => {
-// 	var scroll_position = window.scrollY;
-// 	if (scroll_position > 250) {
-//     Object.assign(header.style, buttonPrimary)
-//     navLinks.forEach((link) => {
-//       link.style.color = '#964ac9'
-//     })
-// 	} else {
-// 		header.style.backgroundColor = 'transparent';
-//     navLinks.forEach((link) => {
-//       link.style.color = '#fff'
-//     })
-// 	}
-// });
 
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
@@ -63,7 +38,6 @@ const prev = () => {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add('active');
 }
-
 
 //faq
 let faqAccordion = document.querySelectorAll('.faq .accordion-container .accordion')
