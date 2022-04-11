@@ -4,10 +4,12 @@ let navbar = document.querySelector(".header .navbar");
 const header = document.querySelector('.header');
 const navLinks = document.querySelectorAll('.navlink');
 
+// mobile menu
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 }
+
 
 scrollingElement = (document.scrollingElement || document.body)
 const scrollToBottom = () => {
