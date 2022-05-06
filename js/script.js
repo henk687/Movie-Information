@@ -10,7 +10,6 @@ menu.onclick = () => {
   navbar.classList.toggle('active');
 }
 
-
 scrollingElement = (document.scrollingElement || document.body)
 const scrollToBottom = () => {
   scrollingElement.scrollTop = scrollingElement.scrollHeight;
